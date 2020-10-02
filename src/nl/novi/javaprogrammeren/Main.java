@@ -1,6 +1,6 @@
 package nl.novi.javaprogrammeren;
 
-public class AnimalMain {
+public class Main {
     /*
     Het is traditie om overerving uit te leggen met behulp van dieren. Hier ontkomen jullie dus ook niet aan.
 
