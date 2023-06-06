@@ -1,5 +1,8 @@
 package nl.novi.javaprogrammeren;
 
+import nl.novi.javaprogrammeren.overerving.Dog;
+import nl.novi.javaprogrammeren.overerving.Lion;
+
 public class AnimalMain {
     /*
     Het is traditie om overerving uit te leggen met behulp van dieren. Hier ontkomen jullie dus ook niet aan.
@@ -34,4 +37,9 @@ public class AnimalMain {
 
      */
 
+
+    public static void main(String[] args) {
+        Dog dog = new Dog("Vikki", "male", "Golden Retriever", "Pieter", "Whiskas");
+        Lion lion = new Lion("Simba", "male", "Uganda", "Savannah", 2);
+    }
 }
