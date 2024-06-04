@@ -1,13 +1,12 @@
 package nl.novi.javaprogrammeren.overerving;
 
+import com.sun.nio.sctp.AbstractNotificationHandler;
+
 public abstract class Animal {
 
   private String name;
   private String gender;
   private int age;
-
-
-  private double location;
 
   public Animal(String name, String gender, int age) {
     this.name = name;
@@ -15,15 +14,19 @@ public abstract class Animal {
     this.age = age;
   }
 
-  public void moveAnimal(double amount) {
-    this.location =+ amount;
+  public abstract void makeSound();
+
+  public void moveAnimal() {
+    System.out.println("The " + name + " moved 25cm.");
   }
 
-  public abstract String makeSound();
+  public void sleepAnimal() {
+    System.out.println("The " + name + " went to sleep for 8 hours.");
+  }
 
-  //sleep method
-
-  //eat method
+  public void feedAnimal(String food) {
+    System.out.println("The " + name + " is eating a " + food);
+  }
 
   public String getName() {
     return name;
@@ -49,11 +52,4 @@ public abstract class Animal {
     this.age = age;
   }
 
-  public double getLocation() {
-    return location;
-  }
-
-  public void setLocation(double location) {
-    this.location = location;
-  }
 }

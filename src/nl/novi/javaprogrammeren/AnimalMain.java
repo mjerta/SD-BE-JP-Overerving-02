@@ -1,6 +1,8 @@
 package nl.novi.javaprogrammeren;
 
-import nl.novi.javaprogrammeren.overerving.Lion;
+import nl.novi.javaprogrammeren.overerving.*;
+
+import javax.swing.*;
 
 public class AnimalMain {
   /*
@@ -36,14 +38,69 @@ public class AnimalMain {
 
    */
   public static void main(String[] args) {
-    var name = "lion";
-    var gender = "female";
-    var age = 12;
-    var cage = "lion cage";
-    var lastFed = "gisteren";
-    var origin = "Africa";
+    var nameLion = "lion";
+    var genderLion = "female";
+    var ageLion = 12;
+    var cageLion = "lion cage";
+    var lastFedLion = "gisteren";
+    var originLion = "Africa";
+    var childrenAmountLion = 4;
 
-    Lion lion = new Lion(name, gender, age, cage, lastFed, origin);
+    Lion lion = new Lion(nameLion, genderLion, ageLion, cageLion, lastFedLion, originLion, childrenAmountLion);
+    lion.printPropertys();
+    lion.moveAnimal();
+    lion.sleepAnimal();
+    lion.makeSound();
+    lion.feedAnimal("steak");
+    System.out.println();
+
+    var nameTiger = "Tiger";
+    var genderTiger = "female";
+    var ageTiger = 12;
+    var cageTiger = "tiger cage";
+    var lastFedTiger = "gisteren";
+    var originTiger = "Azië";
+    var stripesAmount = 44;
+    Tiger tiger = new Tiger(nameTiger, genderTiger, ageTiger, cageTiger, lastFedTiger, originTiger, stripesAmount);
+    tiger.printPropertys();
+    tiger.makeSound();
+    System.out.println();
+
+    var nameWolf = "Wolf";
+    var genderWolf = "Male";
+    var ageWolf = 7;
+    var cageWolf = "Wolf cage";
+    var lastFedWolf = "day before yesterday.";
+    var originWolf = "Siberia";
+    var roedelNamwe = "daddy wolf";
+    Wolf wolf = new Wolf(nameWolf, genderWolf, ageWolf, cageWolf, lastFedWolf, originWolf, roedelNamwe);
+    wolf.printPropertys();
+    wolf.makeSound();
+    System.out.println();
+
+    var nameDog = "Doggie";
+    var genderDog = "Female";
+    var ageDog = 6;
+    var petOwner = "Maarten";
+    var favouriteFoodBrand = "Duck";
+    var species = "Samoyed";
+
+    Dog dog = new Dog(nameDog, genderDog, ageDog, petOwner, favouriteFoodBrand, species);
+    dog.printPropertys();
+    dog.makeSound();
+
+    var nameCat = "Cat";
+    var genderCat = "Male";
+    var ageCat = 12;
+    var petOwnerCat = "Pietje";
+    var favouriteFoodBrandCat = "Nice";
+    var speciesCat = "Syamees";
+    var indoorCat = false;
+
+    Cat cat = new Cat(nameCat, genderCat, ageCat, petOwnerCat, favouriteFoodBrandCat, speciesCat, indoorCat);
+    cat.printPropertys();
+    cat.makeSound();
+
   }
 
 }

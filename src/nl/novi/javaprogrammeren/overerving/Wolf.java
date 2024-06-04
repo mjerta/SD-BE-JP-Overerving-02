@@ -1,17 +1,16 @@
 package nl.novi.javaprogrammeren.overerving;
 
-public class Lion extends WildAnimals {
+public class Wolf extends WildAnimals {
+  private String roedelName;
 
-  private int childrenAmount;
-
-  public Lion(String name, String gender, int age, String cage, String lastFed, String origin, int childrenAmount) {
+  public Wolf(String name, String gender, int age, String cage, String lastFed, String origin, String roedelName) {
     super(name, gender, age, cage, lastFed, origin);
-    this.childrenAmount = childrenAmount;
+    this.roedelName = roedelName;
   }
 
   @Override
   public void makeSound() {
-    System.out.println("Raw");
+    System.out.println("Houwwwwwuuuuhuuu");
   }
 
   public void printPropertys() {
@@ -21,7 +20,7 @@ public class Lion extends WildAnimals {
     System.out.println("Cage : " + super.getCage());
     System.out.println("Last Fed : " + super.getLastFed());
     System.out.println("Origin : " + super.getOrigin());
-    System.out.println("Amount of children : " + childrenAmount);
+    System.out.println("Name of : " + roedelName);
     System.out.println();
   }
 }
